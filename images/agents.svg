@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 780" width="100%" height="100%" aria-hidden="true" style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- 全局柔和基准连线 -->
+    <linearGradient id="base-line" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CBD5E1" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+
+    <!-- 动态光流渐变 (科技蓝 -> 极光紫) -->
+    <linearGradient id="flow-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+
+    <!-- 节点悬浮阴影 (现代SaaS感) -->
+    <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    
+    <!-- 紫色核心节点的高亮阴影 -->
+    <filter id="purple-glow-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#8B5CF6" flood-opacity="0.15"/>
+    </filter>
+
+    <!-- 光流的自发光滤镜 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      /* 优化光流动画：加长线段，让流动更平滑 */
+      .flow-path {
+        stroke-dasharray: 80 800;
+        stroke-dashoffset: 880;
+        animation: flowAnim 4.5s linear infinite;
+      }
+      .flow-path-delay-1 { animation: flowAnim 4.5s linear infinite 1.5s; }
+      .flow-path-delay-2 { animation: flowAnim 4.5s linear infinite 3s; }
+
+      @keyframes flowAnim {
+        0% { stroke-dashoffset: 880; opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { stroke-dashoffset: 0; opacity: 0; }
+      }
+
+      /* 柔和的呼吸灯动画 */
+      .pulse-ring {
+        transform-origin: center;
+        transform-box: fill-box;
+        animation: pulseAnim 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      @keyframes pulseAnim {
+        0% { transform: scale(0.9); opacity: 0.6; stroke-width: 2.5px;}
+        70% { transform: scale(1.6); opacity: 0; stroke-width: 0px;}
+        100% { transform: scale(1.6); opacity: 0; stroke-width: 0px;}
+      }
+      
+      /* 字体排版全局优化 */
+      .label-title { font-size: 15px; font-weight: 600; fill: #1E293B; text-anchor: middle; letter-spacing: -0.2px; }
+      .label-sub { font-size: 12px; font-weight: 400; fill: #64748B; text-anchor: middle; }
+      .layer-label { font-size: 11px; font-weight: 700; fill: #94A3B8; letter-spacing: 1.5px; text-transform: uppercase; }
+      .pill-text { font-size: 13px; font-weight: 600; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- 左侧层级标识 (右移且留出绝对安全区) -->
+  <g transform="translate(30, 0)">
+    <text y="90" class="layer-label">Brain</text>
+    <text y="280" class="layer-label">Skills</text>
+    <text y="480" class="layer-label"> Scenarios</text>
+    <text y="680" class="layer-label">Runtime</text>
+  </g>
+
+  <!-- ================= 1. 连线层 (平移+40px重构) ================= -->
+  <g>
+    <!-- 静态底线 -->
+    <g stroke="url(#base-line)" stroke-width="1.5" fill="none" stroke-linecap="round">
+      <!-- L1 to L2 -->
+      <path d="M 460 120 C 460 200, 260 180, 260 260" />
+      <path d="M 460 120 L 460 260" />
+      <path d="M 460 120 C 460 200, 660 180, 660 260" />
+      
+      <!-- L2 to L3 -->
+      <path d="M 260 310 C 260 390, 260 400, 260 470" />
+      <path d="M 460 310 C 460 390, 260 400, 260 470" />
+      <path d="M 460 310 C 460 390, 460 400, 460 470" />
+      <path d="M 660 310 C 660 390, 460 400, 460 470" />
+      <path d="M 260 310 C 260 390, 660 400, 660 470" opacity="0.25" /> 
+      <path d="M 660 310 C 660 390, 660 400, 660 470" />
+
+      <!-- L3 to L4 -->
+      <path d="M 260 510 C 260 590, 360 570, 360 650" />
+      <path d="M 460 510 C 460 590, 360 570, 360 650" />
+      <path d="M 460 510 C 460 590, 560 570, 560 650" />
+      <path d="M 660 510 C 660 590, 560 570, 560 650" />
+    </g>
+
+    <!-- 动态发光数据流 -->
+    <g stroke="url(#flow-gradient)" stroke-width="3.5" fill="none" stroke-linecap="round" filter="url(#glow)">
+      <!-- 流向路线 1 (汇聚至硬件) -->
+      <path d="M 460 120 C 460 200, 260 180, 260 260 M 260 310 C 260 390, 260 400, 260 470 M 260 510 C 260 590, 360 570, 360 650" class="flow-path" />
+      <!-- 流向路线 2 (汇聚至云端) -->
+      <path d="M 460 120 L 460 260 M 460 310 C 460 390, 460 400, 460 470 M 460 510 C 460 590, 560 570, 560 650" class="flow-path flow-path-delay-1" />
+      <!-- 流向路线 3 (交叉汇聚至硬件) -->
+      <path d="M 460 120 C 460 200, 660 180, 660 260 M 660 310 C 660 390, 460 400, 460 470 M 460 510 C 460 590, 360 570, 360 650" class="flow-path flow-path-delay-2" />
+    </g>
+  </g>
+
+  <!-- ================= 2. 核心节点层 ================= -->
+  
+  <!-- [L1] Model Hub Router (重绘AI星芒与路由分发点，统一科技蓝) -->
+  <g transform="translate(460, 80)">
+    <circle cx="0" cy="0" r="34" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#drop-shadow)"/>
+    <circle cx="0" cy="0" r="26" fill="#EFF6FF" />
+    <!-- 路由与AI结合的星芒图标 -->
+    <path d="M0 -12 C 0 -4, 4 0, 12 0 C 4 0, 0 4, 0 12 C 0 4, -4 0, -12 0 C -4 0, 0 -4, 0 -12 Z" fill="#2563EB" />
+    <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+    <!-- 四周分发路由节点 -->
+    <circle cx="-14" cy="-14" r="2.5" fill="#2563EB" opacity="0.8"/>
+    <circle cx="14" cy="14" r="2.5" fill="#2563EB" opacity="0.8"/>
+    <circle cx="-14" cy="14" r="2.5" fill="#2563EB" opacity="0.8"/>
+    <circle cx="14" cy="-14" r="2.5" fill="#2563EB" opacity="0.8"/>
+    
+    <text y="-62" class="label-title" style="font-size: 16px;">One API Model Hub (Router)</text>
+    <text y="-46" class="label-sub">Reasoning Engine (Brain)</text>
+  </g>
+
+  <!-- ================= [L2] SKILLS (平移+40px) ================= -->
+  <g transform="translate(260, 260)">
+    <rect x="-34" y="-26" width="68" height="52" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#drop-shadow)"/>
+    <circle cx="0" cy="-8" r="3" fill="none" stroke="#64748B" stroke-width="2"/>
+    <circle cx="-10" cy="8" r="3" fill="none" stroke="#64748B" stroke-width="2"/>
+    <circle cx="10" cy="8" r="3" fill="none" stroke="#64748B" stroke-width="2"/>
+    <line x1="-2" y1="-5" x2="-8" y2="5" stroke="#64748B" stroke-width="2"/>
+    <line x1="2" y1="-5" x2="8" y2="5" stroke="#64748B" stroke-width="2"/>
+    <text y="48" class="label-title">Agentic Planning</text>
+    <text y="66" class="label-sub">ReAct / Routing</text>
+  </g>
+
+  <g transform="translate(460, 260)">
+    <rect x="-36" y="-28" width="72" height="56" rx="16" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="2" filter="url(#purple-glow-shadow)"/>
+    <rect x="-14" y="-12" width="28" height="18" rx="2" fill="none" stroke="#64748B" stroke-width="2"/>
+    <line x1="-14" y1="-6" x2="14" y2="-6" stroke="#64748B" stroke-width="1.5"/>
+    <path d="M0 0 L10 10 L4 10 L6 16 L3 17 L0 11 L-5 16 Z" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="1.5" transform="scale(0.85) translate(4, 2)"/>
+    <text y="48" class="label-title">Computer Use</text>
+    <text y="66" class="label-sub">Action / OS Control</text>
+  </g>
+
+  <g transform="translate(660, 260)">
+    <rect x="-34" y="-26" width="68" height="52" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#drop-shadow)"/>
+    <ellipse cx="0" cy="-8" rx="11" ry="4.5" fill="none" stroke="#64748B" stroke-width="2"/>
+    <path d="M-11 -8 L-11 0 A11 4.5 0 0 0 11 0 L11 -8" fill="none" stroke="#64748B" stroke-width="2"/>
+    <path d="M-11 0 L-11 8 A11 4.5 0 0 0 11 8 L11 0" fill="none" stroke="#64748B" stroke-width="2"/>
+    <text y="48" class="label-title">State &amp; Memory</text>
+    <text y="66" class="label-sub">Vector / Context</text>
+  </g>
+
+  <!-- ================= [L3] SCENARIOS (加宽胶囊背景) ================= -->
+  <!-- Web Automation -->
+  <g transform="translate(260, 470)">
+    <rect x="-70" y="-20" width="140" height="40" rx="20" fill="#FFFFFF" filter="url(#drop-shadow)"/>
+    <rect x="-70" y="-20" width="140" height="40" rx="20" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+    <text y="5" class="pill-text" fill="#334155">Web Automation</text>
+  </g>
+
+  <!-- Dev Copilot -->
+  <g transform="translate(460, 470)">
+    <rect x="-65" y="-22" width="130" height="44" rx="22" fill="#FFFFFF" filter="url(#purple-glow-shadow)"/>
+    <rect x="-65" y="-22" width="130" height="44" rx="22" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+    <text y="5" class="pill-text" fill="#6D28D9">Dev Copilot</text>
+  </g>
+
+  <!-- Data Extraction -->
+  <g transform="translate(660, 470)">
+    <rect x="-70" y="-20" width="140" height="40" rx="20" fill="#FFFFFF" filter="url(#drop-shadow)"/>
+    <rect x="-70" y="-20" width="140" height="40" rx="20" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+    <text y="5" class="pill-text" fill="#334155">Data Extraction</text>
+  </g>
+
+  <!-- ================= [L4] DEPLOYMENT RUNTIME ================= -->
+  
+  <!-- Deploy 1: Open Claw Box (重绘为高级边缘芯片算力设备) -->
+  <g transform="translate(360, 660)">
+    <!-- 边缘光晕 -->
+    <circle cx="0" cy="0" r="34" fill="none" stroke="#8B5CF6" class="pulse-ring"/>
+    
+    <rect x="-34" y="-34" width="68" height="68" rx="18" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="2.5" filter="url(#drop-shadow)"/>
+    
+    <!-- 内部CPU级微架构阵列 (更硬核的硬件感) -->
+    <rect x="-16" y="-16" width="32" height="32" rx="6" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+    <!-- 芯片四周触点引脚 -->
+    <line x1="-20" y1="-8" x2="-16" y2="-8" stroke="#C4B5FD" stroke-width="2"/>
+    <line x1="-20" y1="0" x2="-16" y2="0" stroke="#C4B5FD" stroke-width="2"/>
+    <line x1="-20" y1="8" x2="-16" y2="8" stroke="#C4B5FD" stroke-width="2"/>
+    <line x1="16" y1="-8" x2="20" y2="-8" stroke="#C4B5FD" stroke-width="2"/>
+    <line x1="16" y1="0" x2="20" y2="0" stroke="#C4B5FD" stroke-width="2"/>
+    <line x1="16" y1="8" x2="20" y2="8" stroke="#C4B5FD" stroke-width="2"/>
+    <line x1="-8" y1="-20" x2="-8" y2="-16" stroke="#C4B5FD" stroke-width="2"/>
+    <line x1="0" y1="-20" x2="0" y2="-16" stroke="#C4B5FD" stroke-width="2"/>
+    <line x1="8" y1="-20" x2="8" y2="-16" stroke="#C4B5FD" stroke-width="2"/>
+    <line x1="-8" y1="16" x2="-8" y2="20" stroke="#C4B5FD" stroke-width="2"/>
+    <line x1="0" y1="16" x2="0" y2="20" stroke="#C4B5FD" stroke-width="2"/>
+    <line x1="8" y1="16" x2="8" y2="20" stroke="#C4B5FD" stroke-width="2"/>
+    
+    <!-- 中央高光唤醒核 -->
+    <circle cx="0" cy="0" r="5" fill="#8B5CF6" filter="url(#glow)"/>
+    
+    <text y="58" class="label-title">Moltybox</text>
+    <text y="76" class="label-sub" fill="#7C3AED">Edge Actuator (Hands)</text>
+  </g>
+
+  <!-- Deploy 2: SaaS Cloud (与顶部大脑视觉完全统一) -->
+  <g transform="translate(560, 660)">
+    <circle cx="0" cy="0" r="34" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#drop-shadow)"/>
+    <!-- 内部也是一致的淡蓝色背景 -->
+    <circle cx="0" cy="0" r="26" fill="#EFF6FF" />
+    <path d="M-11 5 A 8.5 8.5 0 0 1 -11 -12 A 11 11 0 0 1 9 -10 A 8.5 8.5 0 0 1 13 5 Z" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <text y="58" class="label-title">SaaS Cloud</text>
+    <text y="76" class="label-sub">Serverless Virtual</text>
+  </g>
+
+</svg>

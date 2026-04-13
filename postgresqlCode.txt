@@ -1,0 +1,8 @@
+docker run -d \
+  --name my-postgres \
+  -p 5432:5432 \
+  -v ./postgreSQL/:/var/lib/postgresql \
+  -e POSTGRES_PASSWORD=mysecretpassword \
+  -e POSTGRES_USER=myuser \
+  -e POSTGRES_DB=mydb \
+  postgres:18
