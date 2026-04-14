@@ -146,7 +146,7 @@ export default function Home() {
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <BtnPrimary onClick={() => navigate('/models')}>探索模型</BtnPrimary>
               <BtnSecondary to="/moltybox">
-                了解 MoltyBox
+                了解 MindNode
                 <svg className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />

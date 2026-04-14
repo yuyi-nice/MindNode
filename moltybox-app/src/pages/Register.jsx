@@ -67,7 +67,7 @@ export default function Register() {
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-10">
           <div className="flex h-16 items-center justify-between">
             <Link to="/" className="flex items-center gap-2">
-              <img alt="MoltyBox" className="h-8 w-auto" src="/images/logo.png" />
+              <img alt="MindNode" className="h-8 w-auto" src="/images/logo.png" />
             </Link>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function Register() {
                 创建账户
               </h1>
               <p className="mt-2 text-sm" style={{ color: '#525252' }}>
-                注册 MoltyBox 账户
+                注册 MindNode 账户
               </p>
             </div>
 

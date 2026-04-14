@@ -28,13 +28,13 @@ export default function Blog() {
       console.error('Failed to load blog data:', error);
       // 使用静态数据作为降级
       setPosts([
-        { id: 1, title: '如何用 MoltyBox 构建 24 小时在线的智能客服系统', desc: '从 0 到 1 搭建企业级智能客服，涵盖意图识别、多轮对话、人工接管等完整流程。', date: '2026-03-25', category: '技术分享', read_time: 10, featured: true },
-        { id: 2, title: 'MoltyBox v2.0 发布：支持多模型自动路由', desc: '智能选择最优模型，降低成本 40%', date: '2026-03-20', category: '产品更新', read_time: 5 },
+        { id: 1, title: '如何用 MindNode 构建 24 小时在线的智能客服系统', desc: '从 0 到 1 搭建企业级智能客服，涵盖意图识别、多轮对话、人工接管等完整流程。', date: '2026-03-25', category: '技术分享', read_time: 10, featured: true },
+        { id: 2, title: 'MindNode v2.0 发布：支持多模型自动路由', desc: '智能选择最优模型，降低成本 40%', date: '2026-03-20', category: '产品更新', read_time: 5 },
         { id: 3, title: '深入理解 Agent 技能系统的设计原理', desc: '揭秘技能编排和调度的核心技术', date: '2026-03-18', category: '技术分享', read_time: 8 },
-        { id: 4, title: '某电商平台使用 MoltyBox 提升客服效率 300%', desc: '日均处理 10 万 + 咨询的智能客服实践', date: '2026-03-15', category: '客户案例', read_time: 6 },
+        { id: 4, title: '某电商平台使用 MindNode 提升客服效率 300%', desc: '日均处理 10 万 + 咨询的智能客服实践', date: '2026-03-15', category: '客户案例', read_time: 6 },
         { id: 5, title: '2026 AI 智能体发展趋势报告', desc: 'Agentic AI 将成为下一个风口', date: '2026-03-10', category: '行业新闻', read_time: 7 },
-        { id: 6, title: 'MoltyBox 硬件 Mini 主机开箱评测', desc: '第一台开箱即用的 AI 智能体服务器', date: '2026-03-08', category: '产品更新', read_time: 5 },
-        { id: 7, title: '使用 MoltyBox 构建自动化数据分析流程', desc: '从数据提取到可视化报告的全流程', date: '2026-03-05', category: '技术分享', read_time: 8 },
+        { id: 6, title: 'MindNode 硬件 Mini 主机开箱评测', desc: '第一台开箱即用的 AI 智能体服务器', date: '2026-03-08', category: '产品更新', read_time: 5 },
+        { id: 7, title: '使用 MindNode 构建自动化数据分析流程', desc: '从数据提取到可视化报告的全流程', date: '2026-03-05', category: '技术分享', read_time: 8 },
       ]);
       setCategories(['全部', '产品更新', '技术分享', '客户案例', '行业新闻']);
     } finally {
@@ -74,7 +74,7 @@ export default function Blog() {
           <div className="text-center">
             <p className="text-[12px] font-semibold uppercase tracking-[0.1em]" style={{ color: 'var(--v2-accent)' }}>博客</p>
             <h1 className="mt-2 text-[36px] font-semibold sm:text-[48px]" style={{ color: 'var(--v2-fg)' }}>
-              MoltyBox 官方博客
+              MindNode 官方博客
             </h1>
             <p className="mt-4 max-w-[600px] text-[16px] leading-[26px] mx-auto" style={{ color: 'var(--v2-fg-secondary)' }}>
               产品更新、技术分享、客户案例、行业洞察。
@@ -177,7 +177,7 @@ export default function Blog() {
       <section className="py-20" style={{ background: 'var(--v2-bg-page)' }}>
         <div className="container mx-auto max-w-[1200px] px-6 lg:px-8">
           <div className="rounded-[14px] border border-[#e5e5e5] bg-white p-8 text-center">
-            <h2 className="text-[24px] font-semibold" style={{ color: 'var(--v2-fg)' }}>订阅 MoltyBox 博客</h2>
+            <h2 className="text-[24px] font-semibold" style={{ color: 'var(--v2-fg)' }}>订阅 MindNode 博客</h2>
             <p className="mt-2 text-[14px]" style={{ color: 'var(--v2-fg-secondary)' }}>
               第一时间获取产品更新和技术分享，每月不超过 2 封邮件。
             </p>

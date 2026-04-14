@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchAgents } from '../lib/api';
 
-export default function MoltyBox() {
+export default function MindNode() {
   const [agents, setAgents] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -42,7 +42,7 @@ export default function MoltyBox() {
         <div className="container mx-auto max-w-[1200px] px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-[36px] font-semibold leading-[44px] sm:text-[48px] sm:leading-[56px] lg:text-[56px] lg:leading-[64px]" style={{ color: 'var(--v2-fg)' }}>
-              MoltyBox
+              MindNode
             </h1>
             <h2 className="mt-4 text-[28px] font-semibold leading-[36px] sm:text-[40px] sm:leading-[48px]" style={{ color: 'var(--v2-fg)' }}>
               开箱即用的 AI 助手
@@ -88,7 +88,7 @@ export default function MoltyBox() {
             {/* Cloud Version */}
             <div className="rounded-[14px] border border-[#e5e5e5] bg-white p-8 shadow-sm">
               <p className="text-[12px] font-semibold uppercase tracking-[0.1em]" style={{ color: 'var(--v2-accent)' }}>云端访问</p>
-              <h3 className="mt-2 text-[24px] font-semibold" style={{ color: 'var(--v2-fg)' }}>MoltyBox 云端版</h3>
+              <h3 className="mt-2 text-[24px] font-semibold" style={{ color: 'var(--v2-fg)' }}>MindNode 云端版</h3>
               <p className="mt-2 text-[14px]" style={{ color: 'var(--v2-fg-secondary)' }}>专属云主机 · 7×24 小时在岗 · 注册即用</p>
               <button
                 onClick={handleCloudAccess}
@@ -186,12 +186,12 @@ export default function MoltyBox() {
               </p>
               <h3 className="mt-6 text-[20px] font-semibold" style={{ color: 'var(--v2-fg)' }}>全平台无缝接入</h3>
               <p className="mt-2 text-[14px]" style={{ color: 'var(--v2-fg-secondary)' }}>
-                打破设备壁垒。MoltyBox 将您在移动端的每一句自然交互，瞬间转化为电脑上的原生自动化操作。
+                打破设备壁垒。MindNode 将您在移动端的每一句自然交互，瞬间转化为电脑上的原生自动化操作。
               </p>
             </div>
             <div className="rounded-[14px] border border-[#e5e5e5] bg-white p-6 shadow-sm">
               <div className="flex items-center justify-between border-b border-[#e5e5e5] pb-4">
-                <span className="font-mono text-[12px]" style={{ color: 'var(--v2-fg-tertiary)' }}>MoltyBox Workspace</span>
+                <span className="font-mono text-[12px]" style={{ color: 'var(--v2-fg-tertiary)' }}>MindNode Workspace</span>
               </div>
               <div className="mt-4 grid grid-cols-3 gap-4">
                 <div>

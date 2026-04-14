@@ -125,7 +125,7 @@ export default function DashboardApiKeys() {
       <div>
         <h1 className="text-[24px] font-semibold" style={{ color: '#0a0a0a' }}>API 密钥</h1>
         <p className="mt-2 text-[14px]" style={{ color: '#525252' }}>
-          管理您的 API 密钥。密钥用于通过 API 访问 MoltyBox 服务。
+          管理您的 API 密钥。密钥用于通过 API 访问 MindNode 服务。
         </p>
       </div>
 
@@ -288,7 +288,7 @@ export default function DashboardApiKeys() {
               <>
                 <h3 className="text-[18px] font-semibold" style={{ color: '#0a0a0a' }}>创建 API 密钥</h3>
                 <p className="mt-2 text-[14px]" style={{ color: '#525252' }}>
-                  创建一个新的 API 密钥用于访问 MoltyBox 服务。
+                  创建一个新的 API 密钥用于访问 MindNode 服务。
                 </p>
 
                 <div className="mt-6 space-y-4">

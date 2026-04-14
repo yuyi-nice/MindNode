@@ -74,10 +74,10 @@ export default function Partner() {
           <div className="text-center">
             <p className="text-[12px] font-semibold uppercase tracking-[0.1em]" style={{ color: 'var(--v2-accent)' }}>BOX 生态</p>
             <h1 className="mt-2 text-[36px] font-semibold sm:text-[48px]" style={{ color: 'var(--v2-fg)' }}>
-              共建 MoltyBox 渠道网络
+              共建 MindNode 渠道网络
             </h1>
             <p className="mt-4 max-w-[700px] text-[16px] leading-[26px] mx-auto" style={{ color: 'var(--v2-fg-secondary)' }}>
-              MoltyBox 把 AI 算力打包成即插即用的算力盒子，渠道伙伴只需连接市场资源，即可在总部交付、运维和售后支持下获得持续收益。
+              MindNode 把 AI 算力打包成即插即用的算力盒子，渠道伙伴只需连接市场资源，即可在总部交付、运维和售后支持下获得持续收益。
             </p>
           </div>
         </div>
@@ -140,13 +140,13 @@ export default function Partner() {
               <h2 className="text-[24px] font-semibold" style={{ color: 'var(--v2-fg)' }}>渠道收益伙伴</h2>
               <p className="mt-2 text-[14px]" style={{ color: 'var(--v2-fg-secondary)' }}>主营</p>
               <p className="mt-4 text-[14px] leading-[26px]" style={{ color: 'var(--v2-fg-secondary)' }}>
-                负责客户拓展、签单交付，在所属区域销售 MoltyBox 及配套服务。单季度售卖超过 100 台即可晋级渠道收益伙伴。
+                负责客户拓展、签单交付，在所属区域销售 MindNode 及配套服务。单季度售卖超过 100 台即可晋级渠道收益伙伴。
               </p>
               <div className="mt-6">
                 <p className="text-[14px] font-medium" style={{ color: 'var(--v2-fg)' }}>收益方式</p>
                 <ul className="mt-3 space-y-2">
                   {[
-                    '每台 MoltyBox 享有销售差价',
+                    '每台 MindNode 享有销售差价',
                     '获取业绩返点奖励',
                     '区域保护与商机登记',
                   ].map(item => (
@@ -166,7 +166,7 @@ export default function Partner() {
               <h2 className="text-[24px] font-semibold" style={{ color: 'var(--v2-fg)' }}>生态共建伙伴</h2>
               <p className="mt-2 text-[14px]" style={{ color: 'var(--v2-fg-secondary)' }}>共创</p>
               <p className="mt-4 text-[14px] leading-[26px]" style={{ color: 'var(--v2-fg-secondary)' }}>
-                与 MoltyBox 一起打造场景案例、内容传播或本地化服务，放大 Box 生态影响力。
+                与 MindNode 一起打造场景案例、内容传播或本地化服务，放大 Box 生态影响力。
               </p>
               <div className="mt-6">
                 <p className="text-[14px] font-medium" style={{ color: 'var(--v2-fg)' }}>您可获得</p>
@@ -263,7 +263,7 @@ export default function Partner() {
       {/* CTA */}
       <section className="py-20">
         <div className="container mx-auto max-w-[1200px] px-6 lg:px-8 text-center">
-          <h2 className="text-[28px] font-semibold" style={{ color: 'var(--v2-fg)' }}>把 MoltyBox 带到你的市场</h2>
+          <h2 className="text-[28px] font-semibold" style={{ color: 'var(--v2-fg)' }}>把 MindNode 带到你的市场</h2>
           <p className="mt-4 text-[16px]" style={{ color: 'var(--v2-fg-secondary)' }}>
             Box 生态伙伴在总部支持下更快扩张 AI 算力版图，期待与你一起共建。
           </p>

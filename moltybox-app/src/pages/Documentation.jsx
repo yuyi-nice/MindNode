@@ -9,10 +9,10 @@ export default function Documentation() {
           <div className="text-center">
             <p className="text-[12px] font-semibold uppercase tracking-[0.1em]" style={{ color: 'var(--v2-accent)' }}>文档中心</p>
             <h1 className="mt-2 text-[36px] font-semibold sm:text-[48px]" style={{ color: 'var(--v2-fg)' }}>
-              MoltyBox 开发文档
+              MindNode 开发文档
             </h1>
             <p className="mt-4 max-w-[600px] text-[16px] leading-[26px] mx-auto" style={{ color: 'var(--v2-fg-secondary)' }}>
-              快速上手指南、API 参考、最佳实践，助您充分利用 MoltyBox 平台。
+              快速上手指南、API 参考、最佳实践，助您充分利用 MindNode 平台。
             </p>
             <div className="mt-8 flex justify-center">
               <div className="relative w-full max-w-md">
@@ -38,7 +38,7 @@ export default function Documentation() {
             {[
               {
                 title: '快速开始',
-                desc: '5 分钟上手 MoltyBox',
+                desc: '5 分钟上手 MindNode',
                 icon: (
                   <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -48,7 +48,7 @@ export default function Documentation() {
               },
               {
                 title: '核心概念',
-                desc: '理解 MoltyBox 架构',
+                desc: '理解 MindNode 架构',
                 icon: (
                   <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />

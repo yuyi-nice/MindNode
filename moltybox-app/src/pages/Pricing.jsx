@@ -47,7 +47,7 @@ export default function Pricing() {
                 name: '个人版',
                 price: '免费',
                 desc: '适合个人用户和开发者',
-                features: ['1 个 MoltyBox 实例', '基础技能库访问', '社区支持', '每月 1000 次 API 调用'],
+                features: ['1 个 MindNode 实例', '基础技能库访问', '社区支持', '每月 1000 次 API 调用'],
                 cta: '免费开始',
                 popular: false,
               },
@@ -55,7 +55,7 @@ export default function Pricing() {
                 name: '专业版',
                 price: '¥299/月',
                 desc: '适合小型团队和创业者',
-                features: ['5 个 MoltyBox 实例', '完整技能库访问', '优先技术支持', '每月 10000 次 API 调用', '数据分析报表', '自定义技能开发'],
+                features: ['5 个 MindNode 实例', '完整技能库访问', '优先技术支持', '每月 10000 次 API 调用', '数据分析报表', '自定义技能开发'],
                 cta: '开始试用',
                 popular: true,
               },
@@ -63,7 +63,7 @@ export default function Pricing() {
                 name: '团队版',
                 price: '¥999/月',
                 desc: '适合成长型企业',
-                features: ['20 个 MoltyBox 实例', '团队协作功能', '专属客户成功经理', '无限 API 调用', 'SSO 单点登录', '审计日志', 'SLA 保障'],
+                features: ['20 个 MindNode 实例', '团队协作功能', '专属客户成功经理', '无限 API 调用', 'SSO 单点登录', '审计日志', 'SLA 保障'],
                 cta: '联系销售',
                 popular: false,
               },
@@ -106,14 +106,14 @@ export default function Pricing() {
           <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
             {[
               {
-                name: 'MoltyBox Mini',
+                name: 'MindNode Mini',
                 price: '¥2999',
                 desc: '入门级 AI 工作站',
                 specs: ['Intel Core i7 四核八线程', '8GB 内存', '256GB 固态硬盘', 'Windows 系统'],
                 cta: '立即购买',
               },
               {
-                name: 'MoltyBox Pro',
+                name: 'MindNode Pro',
                 price: '¥5999',
                 desc: '专业级 AI 工作站',
                 specs: ['Intel Core i9 八核十六线程', '16GB 内存', '512GB NVMe 固态硬盘', 'Windows 系统', '独立显卡 RTX 3050'],

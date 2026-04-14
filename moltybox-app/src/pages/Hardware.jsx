@@ -27,7 +27,7 @@ export default function Hardware() {
 
   // 默认硬件信息（当 API 无数据时使用）
   const defaultHardware = {
-    name: 'MoltyBox AI 私人助理 · Mini 主机',
+    name: 'MindNode AI 私人助理 · Mini 主机',
     price: '¥2999',
     description: '通电即用 · 预装 OpenClaw 和 MoltyBot · 零门槛部署 · 私有化安全',
     features: [
@@ -94,7 +94,7 @@ export default function Hardware() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             <div>
               <h1 className="text-[36px] font-semibold sm:text-[48px]" style={{ color: 'var(--v2-fg)' }}>
-                {loading ? 'MoltyBox AI 私人助理 · Mini 主机' : hwData.name}
+                {loading ? 'MindNode AI 私人助理 · Mini 主机' : hwData.name}
               </h1>
               <p className="mt-4 text-[16px] leading-[26px]" style={{ color: 'var(--v2-fg-secondary)' }}>
                 {loading ? '通电即用 · 预装 OpenClaw 和 MoltyBot · 零门槛部署 · 私有化安全' : (hwData.tagline || hwData.short_description || '通电即用 · 预装 OpenClaw 和 MoltyBot · 零门槛部署 · 私有化安全')}
@@ -147,9 +147,9 @@ export default function Hardware() {
         <div className="container mx-auto max-w-[1200px] px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             <div>
-              <h3 className="text-[24px] font-semibold" style={{ color: 'var(--v2-fg)' }}>为什么选择 MoltyBox？</h3>
+              <h3 className="text-[24px] font-semibold" style={{ color: 'var(--v2-fg)' }}>为什么选择 MindNode？</h3>
               <p className="mt-4 text-[16px]" style={{ color: 'var(--v2-fg-secondary)' }}>
-                告别复杂的 AI 部署。MoltyBox 消除了复杂的部署、昂贵的云服务器和隐私担忧。
+                告别复杂的 AI 部署。MindNode 消除了复杂的部署、昂贵的云服务器和隐私担忧。
               </p>
               <ul className="mt-6 space-y-4">
                 {(loading ? defaultHardware.whyChoose : (hwData.why_choose || defaultHardware.whyChoose)).map(item => (

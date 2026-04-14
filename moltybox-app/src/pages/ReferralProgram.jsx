@@ -65,7 +65,7 @@ export default function ReferralProgram() {
           <div className="text-center">
             <p className="text-[12px] font-semibold uppercase tracking-[0.1em]" style={{ color: 'var(--v2-accent)' }}>推荐官计划</p>
             <h1 className="mt-2 text-[36px] font-semibold sm:text-[48px]" style={{ color: 'var(--v2-fg)' }}>
-              推荐 MoltyBox，获得丰厚奖励
+              推荐 MindNode，获得丰厚奖励
             </h1>
             <p className="mt-4 max-w-[600px] text-[16px] leading-[26px] mx-auto" style={{ color: 'var(--v2-fg-secondary)' }}>
               每成功推荐一位客户，即可获得高达 20% 的佣金奖励。无上限，多推多得。
@@ -82,7 +82,7 @@ export default function ReferralProgram() {
             {[
               { step: '1', title: '注册成为推荐官', desc: '填写申请表单，加入我们' },
               { step: '2', title: '获取专属链接', desc: '获得您的唯一推荐链接' },
-              { step: '3', title: '分享给客户', desc: '通过链接推荐 MoltyBox' },
+              { step: '3', title: '分享给客户', desc: '通过链接推荐 MindNode' },
               { step: '4', title: '收取佣金', desc: '客户购买后自动获得奖励' },
             ].map(item => (
               <div key={item.step} className="text-center">

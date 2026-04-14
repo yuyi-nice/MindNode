@@ -32,7 +32,7 @@ const MobileNav = ({ isOpen, onClose }) => {
           <div className="fixed inset-0 z-40 bg-black/50 lg:hidden" onClick={onClose}></div>
           <div className="fixed top-16 left-0 right-0 z-50 bg-white border-b border-[#e5e5e5] shadow-lg lg:hidden">
             <nav className="w-full px-4 py-2 space-y-0.5">
-              <Link to="/moltybox" onClick={onClose} className="block px-3 py-2 text-[14px] font-medium text-[#525252] hover:text-[#0a0a0a] hover:bg-[#eef2ff] rounded-md">MoltyBox</Link>
+              <Link to="/moltybox" onClick={onClose} className="block px-3 py-2 text-[14px] font-medium text-[#525252] hover:text-[#0a0a0a] hover:bg-[#eef2ff] rounded-md">MindNode</Link>
               <Link to="/skills" onClick={onClose} className="block px-3 py-2 text-[14px] font-medium text-[#525252] hover:text-[#0a0a0a] hover:bg-[#eef2ff] rounded-md">技能库</Link>
               <Link to="/hardware" onClick={onClose} className="block px-3 py-2 text-[14px] font-medium text-[#525252] hover:text-[#0a0a0a] hover:bg-[#eef2ff] rounded-md">盒子</Link>
               <Link to="/models" onClick={onClose} className="block px-3 py-2 text-[14px] font-medium text-[#525252] hover:text-[#0a0a0a] hover:bg-[#eef2ff] rounded-md">模型</Link>
@@ -263,11 +263,11 @@ export default function Layout() {
         <div className="flex h-16 w-full items-center justify-between px-4 sm:px-6">
           {/* 左侧：Logo */}
           <Link to="/" className="flex items-center shrink-0">
-            <img alt="MoltyBox" className="h-8 w-auto" src="/images/logo.png" />
+            <img alt="MindNode" className="h-8 w-auto" src="/images/logo.png" />
           </Link>
           {/* 中间：桌面导航 - 仅在大屏显示，靠左对齐 */}
           <nav className="hidden lg:flex items-center gap-0.5 ml-6">
-            <NavItem to="/moltybox">MoltyBox</NavItem>
+            <NavItem to="/moltybox">MindNode</NavItem>
             <NavItem to="/skills">技能库</NavItem>
             <NavItem to="/hardware">盒子</NavItem>
             <NavItem to="/models">模型</NavItem>
@@ -310,7 +310,7 @@ export default function Layout() {
           <div className="grid grid-cols-1 gap-8 border-b border-[#e5e5e5] pb-8 sm:gap-12 lg:grid-cols-12">
             <div className="lg:col-span-4">
               <div className="flex flex-col gap-4">
-                <Link to="/" className="text-base font-semibold" style={{ color: 'var(--v2-fg)' }}>MoltyBoxAI</Link>
+                <Link to="/" className="text-base font-semibold" style={{ color: 'var(--v2-fg)' }}>MindNodeAI</Link>
                 <div className="flex items-center gap-3">
                   <a href="https://www.linkedin.com/company/ag-cloud/" target="_blank" rel="noreferrer" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#e5e5e5] text-[#737373] hover:text-[#0a0a0a] hover:border-[#0a0a0a]">
                     <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
@@ -338,7 +338,7 @@ export default function Layout() {
                 <div>
                   <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.08em]" style={{ color: 'var(--v2-fg-tertiary)' }}>产品</h3>
                   <ul className="flex flex-col gap-2.5">
-                    <li><Link to="/moltybox" className="text-[15px] text-[#525252] hover:text-[#0a0a0a]">MoltyBox</Link></li>
+                    <li><Link to="/moltybox" className="text-[15px] text-[#525252] hover:text-[#0a0a0a]">MindNode</Link></li>
                     <li><Link to="/skills" className="text-[15px] text-[#525252] hover:text-[#0a0a0a]">技能库</Link></li>
                     <li><Link to="/hardware" className="text-[15px] text-[#525252] hover:text-[#0a0a0a]">盒子</Link></li>
                     <li><Link to="/models?tab=llm" className="text-[15px] text-[#525252] hover:text-[#0a0a0a]">模型</Link></li>
@@ -365,7 +365,7 @@ export default function Layout() {
             </div>
           </div>
           <div className="pt-4 text-xs" style={{ color: 'var(--v2-fg-secondary)' }}>
-            <p>© 2026 MoltyBoxAI. 版权所有.</p>
+            <p>© 2026 MindNodeAI. 版权所有.</p>
           </div>
         </div>
       </footer>

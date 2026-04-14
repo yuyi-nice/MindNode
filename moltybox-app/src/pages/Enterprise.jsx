@@ -136,7 +136,7 @@ export default function Enterprise() {
             <div className="relative">
               <div className="rounded-[14px] border border-[#e5e5e5] bg-white p-6 shadow-sm">
                 <div className="flex items-center justify-between border-b border-[#e5e5e5] pb-4">
-                  <span className="font-mono text-[12px]" style={{ color: 'var(--v2-fg-tertiary)' }}>MoltyBox Enterprise</span>
+                  <span className="font-mono text-[12px]" style={{ color: 'var(--v2-fg-tertiary)' }}>MindNode Enterprise</span>
                 </div>
                 <div className="mt-4 grid grid-cols-2 gap-4">
                   <div>
@@ -358,9 +358,9 @@ export default function Enterprise() {
                   </label>
                   <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                     {[
-                      { value: 'moltybox', label: 'MoltyBox 桌面客户端' },
+                      { value: 'moltybox', label: 'MindNode 桌面客户端' },
                       { value: 'skills', label: '技能库' },
-                      { value: 'hardware', label: 'MoltyBox Mini/Pro 主机' },
+                      { value: 'hardware', label: 'MindNode Mini/Pro 主机' },
                       { value: 'agents', label: 'AI 智能体定制' },
                       { value: 'cloud', label: '云端私有化部署' },
                       { value: 'enterprise', label: '企业级功能（SSO/权限管理等）' },
