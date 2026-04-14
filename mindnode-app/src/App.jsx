@@ -7,6 +7,7 @@ import Skills from './pages/Skills';
 import SkillDetail from './pages/SkillDetail';
 import Hardware from './pages/Hardware';
 import Models from './pages/Models';
+import ModelDetail from './pages/ModelDetail';
 import Partner from './pages/Partner';
 import ReferralProgram from './pages/ReferralProgram';
 import Enterprise from './pages/Enterprise';
@@ -37,6 +38,7 @@ function App() {
             <Route path="skills/:slug" element={<SkillDetail />} />
             <Route path="hardware" element={<Hardware />} />
             <Route path="models" element={<Models />} />
+            <Route path="models/:slug" element={<ModelDetail />} />
             <Route path="partner" element={<Partner />} />
             <Route path="referral-program" element={<ReferralProgram />} />
             <Route path="enterprise" element={<Enterprise />} />

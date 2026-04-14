@@ -40,11 +40,14 @@ class AIModelResponse(AIModelBase):
     input_types: List[str]
     output_types: List[str]
     supported_languages: List[str]
+    capabilities: List[str] = []
     pricing_input: float
     pricing_output: float
     currency: str
     is_available: bool
     is_featured: bool
+    is_new: bool = False
+    long_description: Optional[str] = None
     sort_order: int = 0
 
     class Config:

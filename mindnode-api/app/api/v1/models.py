@@ -39,7 +39,7 @@ async def get_providers():
     return APIResponse(data=providers)
 
 
-@router.get("/{slug}", response_model=APIResponse[AIModelResponse])
+@router.get("/{slug:path}", response_model=APIResponse[AIModelResponse])
 async def get_model(slug: str):
     """获取模型详情"""
     model = db.get_model_by_slug(slug)
